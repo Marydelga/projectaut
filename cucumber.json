@@ -4,11 +4,14 @@
     },
     "paths": [
         "src/test/features/"
+       
     ],
     "publishQuiet":true,
     "dryRun":false,
     "require": [
-        "src/test/steps/*.ts"
+        "src/test/steps/*.ts",
+         "src/hooks/hooks.ts",
+         "src/hooks/PageFixture.ts"
     ],
     "format":["progress"],
     "requireModule":[

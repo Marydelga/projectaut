@@ -1,19 +1,19 @@
-Feature: User authenticated delete address
+Feature: User authenticated
 
 Background:
 Given User navigates to the application
-And User click on the login icon
+And User click on the login link
 
 Scenario: Login should be success
-And user enter the username as "marianty.delgado@globant.com"
-And user enter the password as "Formula8792"
+And user enter the username as "<username>"
+And user enter the password as "<password>"
 When User click on the login button
 Then Login should be success
 
 
-Scenario: login shouldn't be success
-And user enter the username as "marianty.delgado@globant.com"
-And user enter the password as "Formula92"
+Scenario: Login should fail
+And user enter the username as "<username>"
+And user enter the password as "<password>"
 When User click on the login button
 But Login should fail
 
@@ -24,3 +24,9 @@ And user click on address button
 When user click on delete button
 Then address should be deleted
 
+Examples:
+
+
+| username                     | password   |
+|marianty.delgado@globant.com  | Formula8792|
+|marianty.delgado@globant.com  |  Formula92 |
